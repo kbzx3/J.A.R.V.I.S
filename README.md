@@ -34,25 +34,31 @@ This project glues together a few different local models to create a seamless vo
 2. **Python**: 3.9+ recommended.
 3. **Ollama**: Download from [ollama.com](https://ollama.com/) and ensure it's running in the background.
 
-## Installation
+## Installation & Quick Start
 
-1. Pull the required language model via Ollama:
+### Method 1: The Easy Way (Pre-compiled Executable)
+1. Install [Ollama](https://ollama.com/) and download the language model by opening your terminal and running:
    ```bash
    ollama pull qwen2.5:7b
    ```
+2. Go to the **Releases** tab on the right side of this GitHub page and download **`main.exe`** (or `Jarvis.exe`).
+3. Double-click the `.exe` to run the assistant! 
 
-2. Install the necessary Python packages:
+*(Note: The first time you launch the `.exe`, it will invisibly download about 200MB of critical voice models like Whisper and Silero in the background. Be patient if the UI takes a minute or two to pop up!)*
+
+### Method 2: Running from Python Source (For Developers)
+
+1. Ensure Ollama is installed and running the `qwen2.5:7b` model as described above.
+2. Install the necessary Python (3.9+) packages:
    ```bash
    pip install -r requirements.txt
    ```
    *(Note: For faster Whisper/TTS performance, install the PyTorch version with CUDA support if you have an Nvidia GPU).*
 
-## Running the Assistant
-
-Execute the main script:
-```bash
-python main.py
-```
+3. Execute the main script:
+   ```bash
+   python main.py
+   ```
 
 - When the UI appears, say **"Hey Jarvis"**. Keep in mind the first launch might take a couple of minutes to download the Whisper/Silero/WakeWord models to your cache.
 - Wait for the wake chime, then speak your command.
