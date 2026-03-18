@@ -1,0 +1,11 @@
+sounddevice
+numpy
+scipy
+faster-whisper
+openwakeword
+torch
+ollama
+Pillow
+pycaw
+comtypes
+requests
