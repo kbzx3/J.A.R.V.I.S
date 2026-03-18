@@ -1,5 +1,7 @@
 # J.A.R.V.I.S. Local Voice Assistant
 
+![J.A.R.V.I.S. UI](Images/gui.png)
+
 A completely local, LLM-based voice assistant for Windows. Everything runs entirely on your own machine (no cloud APIs required).
 
 ## Architecture
@@ -23,12 +25,15 @@ This project glues together a few different local models to create a seamless vo
   - Set timers
   - Remember facts across sessions (saved to `jarvis_long_term_memory.txt`)
 - **Reactive UI**: Built with Tkinter. Displays a core ring animation that reacts to audio input and visualizes current system state (listening, thinking, speaking).
+  ![Listening State](Images/listening.png) ![Analyzing State](Images/analysing.png) ![Responding State](Images/responding.png)
+- **Fast Startup**: Models like Whisper and OpenWakeWord are lazy-loaded or run in background threads, and Ollama gets a background "warmup" ping so the first spoken query is fast.
 
 ## Setup Requirements
 
 1. **OS**: Windows (Some system tools are Windows-specific).
 2. **Python**: 3.9+ recommended.
-3. **Ollama**: Download from [ollama.com](https://ollama.com/) and ensure it's running in the background. 
+3. **Ollama**: Download from [ollama.com](https://ollama.com/) and ensure it's running in the background.
+
 ## Installation
 
 1. Pull the required language model via Ollama:
